@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { AuthenticationService } from '../../../core/authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ]
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+  constructor(private authService: AuthenticationService, private router: Router) { }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);  // Redirect to login page
+  }
+}
