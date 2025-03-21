@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthenticationService } from '../../../core/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +16,21 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ]
 })
 export class LoginComponent {
-  constructor(private router: Router) { }
+  username: string = '';
+  password: string = '';
+
+  constructor(private authService: AuthenticationService, private router: Router) { }
 
   login() {
-    this.router.navigate(['/home']);
+    if (this.authService.login(this.username, this.password)) {
+      this.router.navigate(['/home']);
+    } else {
+      alert('Invalid credentials');
+    }
   }
 }
