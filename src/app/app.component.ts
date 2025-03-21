@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SidebarComponent } from './features//home/sidebar/sidebar.component';
+import { AuthenticationService } from './core/authentication.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [RouterModule, CommonModule, SidebarComponent]
 })
 export class AppComponent {
-  title = 'angular-blank-project';
+  constructor(public authService: AuthenticationService) { }
 }

@@ -1,1 +1,9 @@
-<router-outlet />
+<ng-container *ngIf="authService.isLoggedIn(); else loginTemplate">
+  <app-sidebar></app-sidebar>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</ng-container>
+<ng-template #loginTemplate>
+  <router-outlet></router-outlet>
+</ng-template>

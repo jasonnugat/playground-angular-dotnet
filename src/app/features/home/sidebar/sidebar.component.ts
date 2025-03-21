@@ -4,9 +4,8 @@ import { MatListModule } from '@angular/material/list';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
   standalone: true,
-  imports: [
-    MatListModule
-  ]
+  imports: [MatListModule]
 })
 export class SidebarComponent { }
