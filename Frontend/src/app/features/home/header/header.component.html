@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>
+        <img src="images/logo.png" alt="Angular Logo" class="logo">
+    </span>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="userMenu">Admin</button>
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+</mat-toolbar>
