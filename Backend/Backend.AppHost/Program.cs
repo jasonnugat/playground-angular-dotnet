@@ -11,10 +11,4 @@ builder.AddProject<Projects.Backend_Web>("webfrontend")
     .WithReference(apiService)
     .WaitFor(apiService);
 
-builder.AddNpmApp("frontend-angular", "../../Frontend")
-    .WithReference(apiService)
-    .WithHttpEndpoint(port: 7005, env: "PORT")
-    .WithExternalHttpEndpoints()
-    .PublishAsDockerFile();
-
 builder.Build().Run();
