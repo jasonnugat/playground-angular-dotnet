@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.ApiService", "Backe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Web", "Backend.Web\Backend.Web.csproj", "{4D8FCCB3-8403-4C88-A20F-42526D053AC4}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Fronted", "..\Frontend\Frontend.csproj", "{897D9B89-2ECE-442A-8710-FBAC732F135A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,12 @@ Global
 		{4D8FCCB3-8403-4C88-A20F-42526D053AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8FCCB3-8403-4C88-A20F-42526D053AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8FCCB3-8403-4C88-A20F-42526D053AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897D9B89-2ECE-442A-8710-FBAC732F135A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
